@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="ActiTime.TestData.Listeners"/>
+  </listeners>
+  <test thread-count="5" parallel="tests" name="Error(failed)">
+    <classes>
+      <class name="TimeTracking.ActiTime.ErrorValidation">
+        <methods>
+          <include name="lauchApplication"/>
+          <include name="verifyLoginErrorMessage"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- TimeTracking.ActiTime.ErrorValidation -->
+    </classes>
+  </test> <!-- Error(failed) -->
+</suite> <!-- Failed suite [Suite] -->
